@@ -33,8 +33,8 @@ $(function() {
         .replace(/</g, "&lt")
         .replace(/>/g, "&gt")
         .replace(/\n|\r/g, "<br>")
-        .replace(/\x20/g, "&nbsp")
-        .replace(/\u3000/g, "&emsp")
+        .replace(/\x20/g, "&nbsp;")
+        .replace(/\u3000/g, "&emsp;")
         .replace(/\[color:(#.{3,6})\]/g, "<span style='color: $1;'>")
         .replace(/\[font_size:(.+?)\]/g, function (v, v1) {
           return "<span style='font-size: " + font_size[v1] + ";'>";

@@ -6,6 +6,7 @@
 // @author       ロークライト
 // @match        http://futahana.rash.jp/yumeyuki/*
 // @require      https://code.jquery.com/jquery-3.7.1.min.js
+// @require      http://futahana.rash.jp/yumeyuki/assets/js/models/room.js?1.6.3
 // ==/UserScript==
 
 var $ = window.jQuery;
@@ -15,7 +16,7 @@ $(function() {
   $("body").css("font-family", "Trebuchet MS,Verdana,Arial,sans-serif !important");
 
   $.ajax({
-    url:"http://futahana.rash.jp/yumeyuki/assets/js/models/room.js",
+    url:"http://futahana.rash.jp/yumeyuki/assets/js/models/room.js?1.6.3",
     dataType:"text/javascript",
     success:function(data){
       data.Room.Preview = function(){
@@ -81,4 +82,4 @@ $(function() {
     }
   });
 
-})();
+});

@@ -63,7 +63,7 @@ $(function() {
         }));
         if(item){
           item[4] = item[4].replace(/&/g,"&amp").replace(/</g,"&lt").replace(/>/g,"&gt").
-          replace(/\[(BR|br)\]|\n|\r/g,"<br>").replace(/\x20/g,"&nbsp").replace(/\u3000/g,"&emsp").
+          replace(/\[(BR|br)\]|\n|\r/g,"<br>").replace(/\x20/g,"&nbsp;").replace(/\u3000/g,"&emsp;").
           replace(/\[color:(#.{3,6})\]/g,"<span style='color: $1;'>").
           replace(/(\[dice:([0-9]+)\])/g,"[DiceResult: **/$2]").
           replace(/\[room:([0-9]+)\]/g,"[<span class='link' onclick='Room.Move(\"$1\")'>部屋No$1<\/span>]");

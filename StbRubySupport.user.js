@@ -9,13 +9,18 @@
 // ==/UserScript==
 /* global jQuery:false */
 
-(($)=> {
-    $('span.decoarea #deco_u').after('<span id="deco_rb" title="ルビ"><img src="https://soraniwa.428.st/stb/img/ruby.png" style="margin:5px;padding:0;"><span>');
-    $('#deco_rb').click(function() {
-      $('#text').val().substr(0,$('#text').selectionStart)
+(function() {
+  'use strict';
+  const Rb = document.createElement('span');
+  Rb.id = "deco_rb";
+  Rb.title="ルビ";
+  Rb.innerHTML = '<img src="https://soraniwa.428.st/stb/img/ruby.png" style="margin:5px;padding:0;">';
+  Rb.addEventListener("click",function() {
+    const txt = document.getElementById('text');
+      txt.value = txt.value.substr(0,txt.selectionStart)
         +"<rb>"
-        +$('#text').val().substr($('#text').selectionStart,$('#text').selectionEnd-$('#text').selectionStart)
+        +txt.value.substr(txt.selectionStart,txt.selectionEnd-txt.selectionStart)
         +"</rb><rt></rt>"
-        +$('#text').val().substr($('#text').selectionEnd);
-    });
-})(jQuery);
+        +txt.value.substr(txt.selectionEnd);
+    })
+})();

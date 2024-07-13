@@ -12,15 +12,16 @@
 (function() {
   'use strict';
   const Rb = document.createElement('span');
+  const TargetTxt = document.getElementById('text');
   Rb.id = "deco_rb";
   Rb.title="ルビ";
   Rb.innerHTML = '<img src="https://soraniwa.428.st/stb/img/ruby.png" style="margin:5px;padding:0;">';
+  document.querySelector('span.decoarea span#deco_u').after(Rb);
   Rb.addEventListener("click",function() {
-    const txt = document.getElementById('text');
-      txt.value = txt.value.substr(0,txt.selectionStart)
+      Targettxt.value = Targettxt.value.substr(0,Targettxt.selectionStart)
         +"<rb>"
-        +txt.value.substr(txt.selectionStart,txt.selectionEnd-txt.selectionStart)
+        +Targettxt.value.substr(Targettxt.selectionStart,Targettxt.selectionEnd-Targettxt.selectionStart)
         +"</rb><rt></rt>"
-        +txt.value.substr(txt.selectionEnd);
-    })
+        +Targettxt.value.substr(Targettxt.selectionEnd);
+    });
 })();

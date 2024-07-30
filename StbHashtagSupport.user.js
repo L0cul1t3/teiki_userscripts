@@ -15,13 +15,13 @@
     const params = new URLSearchParams(window.location.search);
 
     if(params.get("list")&&params.get("room")&&params.get("room")!="-1"){
-      if(params.get("list")=="1"){
+      if(params.get("list")=="1"||params.get("list")=="8"){
         tg.href = `./?mode=chat&list=0&room=${params.get("room")}${tg.href.substring(tg.href.indexOf("&keyword="))}`;
       }else{
         tg.href = `./?mode=chat&list=${params.get("list")}&room=${params.get("room")}${tg.href.substring(tg.href.indexOf("&keyword="))}`;
       }
     }else if(params.get("list")&&params.get("room")=="-1"){
-      if(params.get("list")=="1"){
+      if(params.get("list")=="1"||params.get("list")=="8"){
         tg.href = `./?mode=chat&list=0${tg.href.substring(tg.href.indexOf("&keyword="))}`;
       }else{
         tg.href = `./?mode=chat&list=${params.get("list")}${tg.href.substring(tg.href.indexOf("&keyword="))}`;

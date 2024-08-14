@@ -147,7 +147,8 @@
   }
 
   function setParty() {
-    const id = parseInt($("#l0c_ptli").val());
+    let id = parseInt($("#l0c_ptli").val());
+    console.log(id)
     if(id===-1) return false;
     const FullMem = $('#fullmember');
     if(parties){

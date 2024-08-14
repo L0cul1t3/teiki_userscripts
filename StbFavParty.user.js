@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        StbFavParty
-// @version     v0.11
+// @version     v0.12
 // @description 連れ出しのお気に入りとかできたらいいな～なやつ
 // @author      L0cul1t3
 // @match       https://soraniwa.428.st/stb/*

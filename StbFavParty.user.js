@@ -41,10 +41,10 @@
       cursor: "pointer",
     });
     $('#l0c_ptdel').css({backgroundColor:"#cc5577"});
+    $("#l0c_ptset").on("click", setParty);
 
     if (parties) {
       listPartyData();
-      $("#l0c_ptset").on("click", setParty);
     }
     $('#l0c_ptrg').on("click", savePartyData);
 

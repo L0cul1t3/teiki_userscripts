@@ -12,9 +12,6 @@
 /* global jQuery:false */
 
 (($) => {
-  if (localStorage.hasOwnProperty("partyData")) {
-    localStorage.removeItem("partyData");
-  }
   let partyJsonRaw = GM_getValue("partyData",null);
   let partyJson = (partyJsonRaw!==null)?JSON.parse(partyJsonRaw).flat(Infinity):null;
   let parties = (partyJson!==null)?Array.from(new Map(partyJson.map((party)=>[party.members, party])).values()):null;
@@ -82,7 +79,7 @@
   }
 
   function onReaderLoad(event){
-    console.log(JSON.parse(event.target.result));
+    console.log(JSON.stringify(event.target.result));
     var obj = JSON.parse(event.target.result);
     if(parties){
       parties = obj;

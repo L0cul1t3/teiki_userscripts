@@ -76,19 +76,14 @@
     var reader=new FileReader();
     reader.onload = onReaderLoad;
     reader.readAsText(event.target.files[0]);
-    var obj = event.target.result;
-    if(parties){
-      parties = obj;
-    }else{
-      parties = [];
-      parties = obj;
-    }
     listPartyData();
     alert("編成リストを読み込みました。");
   }
 
   function onReaderLoad(event){
     console.log(event.target.result);
+    var obj = event.target.result;
+    parties = obj;
   }
 
   function listPartyData() {

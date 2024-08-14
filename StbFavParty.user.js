@@ -19,7 +19,6 @@
   let partyJson = (partyJsonRaw!==null)?JSON.parse(partyJsonRaw).flat(Infinity):null;
   let parties = (partyJson!==null)?Array.from(new Map(partyJson.map((party)=>[party.members, party])).values()):null;
 
-  console.log(parties);
   $(window).load(function(){
     if ($('#maparea')!==null) {
       console.log("[StbFavParty] : 有効");

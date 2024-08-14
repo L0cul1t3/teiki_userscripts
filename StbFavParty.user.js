@@ -82,8 +82,14 @@
   }
 
   function onReaderLoad(event){
+    console.log(JSON.parse(event.target.result));
     var obj = JSON.parse(event.target.result);
-    parties = obj.flat(Infinity);
+    if(parties){
+      parties = obj;
+    }else{
+      parties = [];
+      parties = obj;
+    }
     listPartyData();
     alert("編成リストを読み込みました。");
   }

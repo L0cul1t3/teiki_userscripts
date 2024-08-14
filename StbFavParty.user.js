@@ -83,7 +83,7 @@
 
   function onReaderLoad(event){
     var obj = JSON.parse(event.target.result);
-    parties = obj;
+    parties = obj.flat(Infinity);
     listPartyData();
     alert("編成リストを読み込みました。");
   }

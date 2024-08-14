@@ -46,7 +46,7 @@
     });
     $('#l0c_ptdel').css({backgroundColor:"#cc5577"});
 
-    if (partyJson.length>0) {
+    if (parties) {
       listPartyData();
       $("#l0c_ptset").on("click", setParty);
     }
@@ -64,7 +64,7 @@
     });
     $('#l0c_ptfile').on("change",onChange);
 
-    if(parties.length>0){
+    if(parties){
       $('#l0c_ptex').on("click",()=>{
         let partyExData = JSON.stringify(parties);
         const link = document.createElement('a');

@@ -76,14 +76,14 @@
     var reader=new FileReader();
     reader.onload = onReaderLoad;
     reader.readAsText(event.target.files[0]);
-    listPartyData();
-    alert("編成リストを読み込みました。");
   }
 
   function onReaderLoad(event){
     console.log(event.target.result);
-    var obj = event.target.result;
+    var obj = JSON.parse(event.target.result);
     parties = obj;
+    listPartyData();
+    alert("編成リストを読み込みました。");
   }
 
   function listPartyData() {

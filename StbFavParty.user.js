@@ -79,8 +79,8 @@
   }
 
   function onReaderLoad(event){
-    console.log(JSON.stringify(event.target.result));
-    var obj = JSON.parse(event.target.result);
+    console.log(event.target.result);
+    var obj = event.target.result;
     if(parties){
       parties = obj;
     }else{

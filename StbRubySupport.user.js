@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         StbRubySupport
-// @version      2024-07-13
-// @description  チャット欄とか記録編集にルビタグ支援のボタンを追加するやつ
+// @version      2024-08-15
+// @description  記録編集・イベントスペース編集にルビタグ支援のボタンを追加するやつ
 // @author       L0cul1t3
 // @match        https://soraniwa.428.st/stb/?mode=storyedit*
 // @match        https://soraniwa.428.st/stb/?mode=roomedit*

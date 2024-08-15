@@ -4,6 +4,7 @@
 // @description  チャット欄とか記録編集にルビタグ支援のボタンを追加するやつ
 // @author       L0cul1t3
 // @match        https://soraniwa.428.st/stb/?mode=storyedit*
+// @match        https://soraniwa.428.st/stb/?mode=roomedit*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=428.st
 // @grant        none
 // ==/UserScript==

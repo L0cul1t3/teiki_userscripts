@@ -112,8 +112,8 @@
       partyName = "ソロ";
     } else if (PartyNum === 2) {
       partyName = window.prompt("ペア名を入力してください(空欄可)", "");
-      if (partyName == "") partyName = `ペア (${partyMember[0]}`;
-      else partyName += ` (ペア / ${partyMember[0]}`;
+      if (partyName == "") partyName = `ペア (${partyMember[0]})`;
+      else partyName += ` (ペア / ${partyMember[0]})`;
     }
     else {
       partyName = window.prompt("編成名を入力してください(空欄可)", "");

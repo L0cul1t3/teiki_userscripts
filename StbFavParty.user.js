@@ -132,6 +132,7 @@
         members: partyMember,
         member_n: PartyNum,
       };
+      if(parties===null) parties = [];
       parties.push(Party);
       GM_deleteValue("partyData");
       let uniqueParties = parties.flat(Infinity);

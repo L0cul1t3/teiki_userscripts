@@ -11,7 +11,7 @@
 
 (($)=> {
   'use strict';
-  window.on("load", () => {
+  window.addEventListener("load", () => {
     if($("#deco_rb")){
       const Rb = document.createElement('span');
       const TargetTxt = document.getElementById('text');

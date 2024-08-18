@@ -12,7 +12,7 @@
 (($)=> {
   'use strict';
   window.addEventListener("load", () => {
-    if($("#deco_rb")){
+    if($("#deco_rb")===null){
       const Rb = document.createElement('span');
       const TargetTxt = document.getElementById('text');
       Rb.id = "deco_rb";

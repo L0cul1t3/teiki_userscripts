@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         StbRubySupport
-// @version      2024-08-18
+// @version      v0.2
 // @description  記録編集・イベントスペース編集にルビタグ支援のボタンを追加するやつ
 // @author       L0cul1t3
 // @match        https://soraniwa.428.st/stb/*

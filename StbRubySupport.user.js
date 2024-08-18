@@ -12,7 +12,7 @@
 (($)=> {
   'use strict';
   window.addEventListener("load", () => {
-    if($("#deco_rb")===null){
+    if(!$("#deco_rb")){
       const Rb = document.createElement('span');
       const TargetTxt = document.getElementById('text');
       Rb.id = "deco_rb";
@@ -24,7 +24,6 @@
         +TargetTxt.value.substr(TargetTxt.selectionStart,TargetTxt.selectionEnd-TargetTxt.selectionStart)
         +"</rb><rt></rt>"
         +TargetTxt.value.substr(TargetTxt.selectionEnd);
-    });
     }
   });
 })(jQuery);

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         StbRubySupport
-// @version      v0.21
+// @version      v0.22
 // @description  記録編集・イベントスペース編集にルビタグ支援のボタンを追加するやつ
 // @author       L0cul1t3
 // @match        https://soraniwa.428.st/stb/*
@@ -9,10 +9,10 @@
 // ==/UserScript==
 /* global jQuery:false */
 
-(($)=> {
+(function () {
   'use strict';
   window.addEventListener("load", () => {
-    if(!$("#deco_rb")){
+    if(document.querySelector("#deco_rb")===null){
       const Rb = document.createElement('span');
       const TargetTxt = document.getElementById('text');
       Rb.id = "deco_rb";
@@ -27,4 +27,4 @@
       });
     }
   });
-})(jQuery);
+})();

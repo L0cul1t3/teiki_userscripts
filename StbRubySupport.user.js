@@ -19,11 +19,12 @@
       Rb.innerHTML = '<img src="https://soraniwa.428.st/stb/img/ruby.png" style="margin:5px;padding:0;">';
       document.querySelector('span.decoarea span#deco_u').after(Rb);
       Rb.on("click", () => {
-      TargetTxt.value = TargetTxt.value.substr(0,TargetTxt.selectionStart)
-        +"<rb>"
-        +TargetTxt.value.substr(TargetTxt.selectionStart,TargetTxt.selectionEnd-TargetTxt.selectionStart)
-        +"</rb><rt></rt>"
-        +TargetTxt.value.substr(TargetTxt.selectionEnd);
+        TargetTxt.value = TargetTxt.value.substr(0,TargetTxt.selectionStart)
+          +"<rb>"
+          +TargetTxt.value.substr(TargetTxt.selectionStart,TargetTxt.selectionEnd-TargetTxt.selectionStart)
+          +"</rb><rt></rt>"
+          +TargetTxt.value.substr(TargetTxt.selectionEnd);
+      }
     }
   });
 })(jQuery);

@@ -17,19 +17,12 @@
   let parties = (partyJson!==null)?Array.from(new Map(partyJson.map((party)=>[party.members, party])).values()):null;
 
   $(window).load(function(){
-    let params = new URL(document.location).searchParams;
-    let pgMode = params.get("mode");
-    if (pgMode === "action") {
-      console.log("[StbFavParty] : 有効");
-      l0cActionPage();
-    } else {
-      console.log("[StbFavParty] : 無効");
-    }
+    l0cActionPage();
   });
 
   function l0cActionPage() {
     $('div.framearea > form[method="post"]:first > p:first > input#memberreset').before('<input type="button" id="l0c_ptrg" class="l0c_btn" value="編成を登録">　');
-    $('div.framearea > form[method="post"]:first').prepend('<div id="l0c_fp"><select id="l0c_ptli" name="l0c_ptli"><option value="-1"> - - - 登録パーティから選択 - - - </option></select> <input type="button" id="l0c_ptset" value="セット">　<input type="button" id="l0c_ptdel" value="削除"></div><br><br>パーティ情報を <input type="button" id="l0c_ptin" class="l0c_btn" value="ファイルから読込"><input type="file" style="display:none;" id="l0c_ptfile"> <input type="button" id="l0c_ptex" class="l0c_btn" value="ファイルに保存"><br><br><br>');
+    $('div.framearea > #maparea ~ form[method="post"]:first').prepend('<div id="l0c_fp"><select id="l0c_ptli" name="l0c_ptli"><option value="-1"> - - - 登録パーティから選択 - - - </option></select> <input type="button" id="l0c_ptset" value="セット">　<input type="button" id="l0c_ptdel" value="削除"></div><br><br>パーティ情報を <input type="button" id="l0c_ptin" class="l0c_btn" value="ファイルから読込"><input type="file" style="display:none;" id="l0c_ptfile"> <input type="button" id="l0c_ptex" class="l0c_btn" value="ファイルに保存"><br><br><br>');
     $('#l0c_ptset, #l0c_ptrg, #l0c_ptdel').css({
       padding: "5px",
       paddingLeft: "16px",

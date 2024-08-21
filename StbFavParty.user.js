@@ -17,12 +17,8 @@
   let parties = (partyJson!==null)?Array.from(new Map(partyJson.map((party)=>[party.members, party])).values()):null;
 
   $(window).load(function(){
-    if($('#maparea:visible')){
-      console.log("[StbFavParty]:有効");
-      l0cActionPage();
-    }else{
-      console.log("[StbFavParty]:無効");
-    }
+    console.log("[StbFavParty] : 起動");
+    l0cActionPage();
   });
 
   function l0cActionPage() {

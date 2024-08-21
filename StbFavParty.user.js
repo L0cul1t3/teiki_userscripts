@@ -17,7 +17,9 @@
   let parties = (partyJson!==null)?Array.from(new Map(partyJson.map((party)=>[party.members, party])).values()):null;
 
   $(window).load(function(){
-    l0cActionPage();
+    if($('#maparea:visible')){
+      l0cActionPage();
+    }
   });
 
   function l0cActionPage() {

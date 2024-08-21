@@ -18,7 +18,10 @@
 
   $(window).load(function(){
     if($('#maparea:visible')){
+      console.log("[StbFavParty]:有効");
       l0cActionPage();
+    }else{
+      console.log("[StbFavParty]:無効");
     }
   });
 
